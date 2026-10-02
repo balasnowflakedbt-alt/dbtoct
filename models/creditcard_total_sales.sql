@@ -1,0 +1,1 @@
+select paymentmethod,sum(amount)as total_amount from RAW.STRIPE.PAYMENT group by paymentmethod

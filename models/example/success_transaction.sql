@@ -1,0 +1,1 @@
+select sum(amount) total_amount,status from raw.stripe.payment group by status
