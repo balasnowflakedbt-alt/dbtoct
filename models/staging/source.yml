@@ -1,0 +1,11 @@
+
+version: 2
+
+sources:
+  - name: emp_dept_dbt
+    database: RAW
+    schema: HR
+    tables:
+      - name: emp
+      - name: dept
+      - name: location
