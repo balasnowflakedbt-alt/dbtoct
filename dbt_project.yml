@@ -40,3 +40,34 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+
+
+name: emp_dept_dbt
+
+version: '1.0.0'
+
+profile: employee_dbt_project
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+snapshot-paths: ["snapshots"]
+
+models:
+  emp_dept_dbt:
+
+    staging:
+      +materialized: view
+
+    intermediate:
+      +materialized: view
+
+    datamarts:
+      +materialized: table
+
+    analytics:
+      +materialized: view
+
+seeds:
+    emp_dept_dbt:
+    +schema: seed
+
